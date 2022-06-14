@@ -63,3 +63,10 @@ h1 {
   object-fit: cover;
   float: left;
 }
+.price-total {
+  text-align: right;
+  margin: 20px 0;
+}
+.price-total p {
+  font-weight: bold;
+}
