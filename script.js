@@ -1,4 +1,5 @@
 const btn = document.querySelectorAll("button");
+const deleteBtn = document.getElementById("delete");
 console.log(btn);
 
 btn.forEach(function (button, index) {
@@ -17,7 +18,7 @@ btn.forEach(function (button, index) {
 
 const addToCart = (productImg, productName, productPrice) => {
   let addTrTag = document.createElement("tr");
-  let trContent = ` <td> <img src=${productImg} alt="" />}<h3>${productName}</h3></td>
+  let trContent = ` <td> <img src=${productImg} alt="" /><h3>${productName}</h3></td>
   <td>
     <p><span>${productPrice}</span><sup>đ</sup></p>
   </td>
@@ -27,4 +28,23 @@ const addToCart = (productImg, productName, productPrice) => {
   let cartTable = document.querySelector("tbody");
 
   cartTable.append(addTrTag);
+  cartTotal();
+};
+// Total price calculation
+const cartTotal = () => {
+  let cartItem = document.querySelectorAll("tbody tr");
+  let totalC = 0;
+  //   console.log(cartItem);
+
+  for (let i = 0; i < cartItem.length; i++) {
+    let inputValue = cartItem[i].querySelector("input").value;
+    let productPrice = cartItem[i].querySelector("span").innerText;
+    // console.log(productPrice);
+    let totalA = 0;
+    totalA += inputValue * productPrice;
+    totalC += totalA;
+  }
+  var cartTotal = document.querySelector(".price-total span");
+  cartTotal.innerHTML = totalC;
+  //   console.log(totalC);
 };
