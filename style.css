@@ -65,7 +65,7 @@ h1 {
 }
 .price-total {
   text-align: right;
-  margin: 20px 0;
+  margin: 20px;
 }
 .price-total p {
   font-weight: bold;
