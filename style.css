@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 24px;
+}
+.product-items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.product-item {
+  width: 20%;
+}
+.product-item img {
+  width: 100%;
+}
+.product-item button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+h1 {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px auto;
+}
